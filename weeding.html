@@ -1,0 +1,154 @@
+---
+title: Weeding
+permalink: /weeding/
+---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
+    integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div id="line">
+
+</div>
+<div id="containter">
+
+    <div id="header">
+        <div id="dorota">
+            Dorota Wojciechowska
+        </div>
+        <div id="and">
+            &
+        </div>
+        <div id="michal">Michał Dolata</div>
+    </div>
+
+    <div id="content">
+        <div id="invitation">
+            mają zaszczyt zawiadomić o uroczystości zawarcia związku małżeńskiego, która odbędzie się<br>
+            13 kwietnia 2024 roku o godzinie 15:00<br>
+            w kościele pw. Podwyższenia Krzyża Świętego w Gogolewie.
+        </div>
+        <div id="countdown-container">
+            <p id="title">Widzimy się za:</p>
+            <p id="countdown"></p>
+        </div>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305702.3428762513!2d16.96354103141288!3d52.17162894721405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47051d3f48b93d25%3A0x3743e4d73769718!2sParafia%20rzymskokatolicka%20pw.%20Podwy%C5%BCszenia%20Krzy%C5%BCa%20%C5%9Awi%C4%99tego!5e0!3m2!1sen!2spl!4v1702814726454!5m2!1sen!2spl"
+            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f8f2e8;
+
+    }
+
+    @font-face {
+        font-family: "Glittery";
+        src: url("../assets/Glittery.ttf");
+    }
+
+    #header {
+        text-align: center;
+        font-family: "Glittery";
+        font-size: 92px;
+        margin-top: 20px;
+
+        color: #115849;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-linear-gradient(transparent, transparent),
+            url(http://xbureau.net/private-sound/wp-content/uploads/2021/12/Gold_Low_Res_01.jpg) repeat;
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-background-clip: text;
+    }
+
+    #content {
+        color: #5b5b5b;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #invitation {
+        font-family: 'Roboto,Arial';
+        font-size: 20px;
+        text-align: center;
+        max-width: 600px;
+        line-height: 26px;
+    }
+
+    #and {
+        margin-top: -50px;
+        margin-left: 50px;
+    }
+
+    #michal {
+        margin-top: -70px;
+    }
+
+    #containter {
+        max-width: 900px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+
+    #countdown-container {
+        margin: 20px 0;
+        text-align: center;
+        /* background-color: #115849; */
+        padding: 10px 20px;
+        border-radius: 3px;
+    }
+
+    #countdown-container>#title {
+        margin: 0;
+    }
+
+    #countdown-container>#countdown {
+        color: #115849;
+        margin: 0;
+    }
+
+    #line {
+        background-color: #115849;
+        width: 100%;
+        height: 20px;
+    }
+
+    #footer {
+        background-color: #115849;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        height: 20px;
+    }
+</style>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 13, 2024 15:00:00");
+
+    countdown.setLabels(
+        ' milisekunda| sekundę| minutę| godzinę| dzień| tydzień| miesiąc| rok| dekada| wiek| tysiąclecie',
+        ' milisekundy| sekundy| minuty| godzin| dni| tygodnie| miesiące| lata| dekady| wieki| tysiąclecia',
+        ' i ',
+        ', ',
+        '',
+        function (n) { return n.toString(); });
+
+
+    countdown(
+        countDownDate,
+        function (ts) {
+            document.getElementById("countdown").innerHTML = ts.toHTML('strong');
+        },
+        countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+</script>
