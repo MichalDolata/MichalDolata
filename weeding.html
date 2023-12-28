@@ -3,50 +3,90 @@ title: Weeding
 permalink: /weeding/
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
-    integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<div id="line">
+<!DOCTYPE html>
+<html lang="pl">
 
-</div>
-<div id="containter">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dorota & Michał - 13.04.2024</title>
+    <link rel="icon" type="image/png" href="../assets/glasses.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <div id="header">
-        <div id="dorota">
-            Dorota Wojciechowska
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dolata.me/weeding" />
+    <meta property="og:title" content="Dorota & Michał - 13.04.2024" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="../assets/toast.jpg" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dolata.me/weeding" />
+    <meta property="twitter:title" content="Dorota & Michał - 13.04.2024" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="../assets/toast.jpg" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"
+        integrity="sha512-FkM4ZGExuYz4rILLbNzw8f3HxTN9EKdXrQYcYfdluxJBjRLthYPxxZixV/787qjN3JLs2607yN5XknR/cQMU8w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+</head>
+
+<body>
+    <div id="line"></div>
+    <div id="containter">
+        <div id="header">
+            <div id="dorota">
+                Dorota Wojciechowska
+            </div>
+            <div id="and">
+                &
+            </div>
+            <div id="michal">Michał Dolata</div>
         </div>
-        <div id="and">
-            &
+
+        <div id="content">
+            <div id="invitation">
+                mają zaszczyt zawiadomić o uroczystości zawarcia związku małżeńskiego, która odbędzie się<br>
+                13 kwietnia 2024 roku o godzinie 15:00<br>
+                w kościele pw. Podwyższenia Krzyża Świętego w Gogolewie.
+            </div>
+            <div id="countdown-container">
+                <p id="title">Widzimy się za:</p>
+                <p id="countdown"></p>
+            </div>
+
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261824.71246498165!2d16.833637769457656!3d52.2801522251695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47051d4044aaf473%3A0x2cb4b2902086746f!2zS2_Fm2Npw7PFgiBSenltc2tva2F0b2xpY2tpIHB3LiBQb2R3ecW8c3plbmlhIEtyennFvGEgxZp3acSZdGVnbw!5e0!3m2!1sen!2spl!4v1703791952436!5m2!1sen!2spl"
+                height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <add-to-calendar-button name="Ślub Doroty i Michała" startDate="2024-04-13" startTime="15:00"
+                endTime="16:00" timeZone="Europe/Warsaw" location="Kościół pw. Podwyższenia Krzyża Świętego w Gogolewie"
+                options="'Apple','Google','MicrosoftTeams'" language="pl" pastDateHandling="disable"
+                listStyle="dropup-static" id="calendar"></add-to-calendar-button>
         </div>
-        <div id="michal">Michał Dolata</div>
     </div>
 
-    <div id="content">
-        <div id="invitation">
-            mają zaszczyt zawiadomić o uroczystości zawarcia związku małżeńskiego, która odbędzie się<br>
-            13 kwietnia 2024 roku o godzinie 15:00<br>
-            w kościele pw. Podwyższenia Krzyża Świętego w Gogolewie.
-        </div>
-        <div id="countdown-container">
-            <p id="title">Widzimy się za:</p>
-            <p id="countdown"></p>
-        </div>
+    <div id="footer"></div>
+</body>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305702.3428762513!2d16.96354103141288!3d52.17162894721405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47051d3f48b93d25%3A0x3743e4d73769718!2sParafia%20rzymskokatolicka%20pw.%20Podwy%C5%BCszenia%20Krzy%C5%BCa%20%C5%9Awi%C4%99tego!5e0!3m2!1sen!2spl!4v1702814726454!5m2!1sen!2spl"
-            width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</div>
-
-<div id="footer"></div>
+</html>
 
 <style>
-    body {
+    * {
         margin: 0;
         padding: 0;
-        background-color: #f8f2e8;
+        box-sizing: border-box;
+    }
 
+    html {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        overflow: auto;
+        background-color: #f8f2e8;
     }
 
     @font-face {
@@ -57,9 +97,7 @@ permalink: /weeding/
     #header {
         text-align: center;
         font-family: "Glittery";
-        font-size: 92px;
         margin-top: 20px;
-
         color: #115849;
         -webkit-text-fill-color: transparent;
         background: -webkit-linear-gradient(transparent, transparent),
@@ -68,12 +106,51 @@ permalink: /weeding/
         -webkit-background-clip: text;
     }
 
+    #map {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #header {
+            font-size: 70px;
+        }
+
+        #dorota {
+            line-height: 95px;
+        }
+
+        #michal {
+            margin-top: -40px
+        }
+
+        #and {
+            margin-top: -40px;
+            margin-left: 50px;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        #header {
+            font-size: 92px;
+        }
+
+        #michal {
+            margin-top: -70px;
+        }
+
+        #and {
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+    }
+
     #content {
         color: #5b5b5b;
-        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 10px;
     }
 
     #invitation {
@@ -82,15 +159,6 @@ permalink: /weeding/
         text-align: center;
         max-width: 600px;
         line-height: 26px;
-    }
-
-    #and {
-        margin-top: -50px;
-        margin-left: 50px;
-    }
-
-    #michal {
-        margin-top: -70px;
     }
 
     #containter {
@@ -129,6 +197,12 @@ permalink: /weeding/
         position: fixed;
         bottom: 0;
         height: 20px;
+        z-index: 1000;
+    }
+
+    #calendar {
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
 </style>
 
